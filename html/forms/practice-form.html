@@ -1,46 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <title>Dream Vacation</title>
 </head>
 <body>
-<form name="Vacation" action="success.html" method="post">
+
+<form name=adventure method="post" action="success.html">
+
 <fieldset>
 <div>
-      <label>Places to visit:</label>
-      <select name="Vacation Spots">
-        <option value="Australia">Australia</option>
-        <option value="Argentina">Argentina</option>
-        <option value="England">England</option>
-      </select>
-    </div>
-    </fieldset>
-    <fieldset>
-    <label>What kind of activities would you like to do? <textarea name="activites"></textarea></label>
-    <div>
- <div>    
-      <label>When would you like to start your trip?</label>
-      <input type="date" name="startdate">
-    </div>
-    <div>    
-      <label>When would you like to return home?</label>
-      <input type="date" name="enddate">
-    </div>
-    <div>
-    <legend>What type of trip is this?</legend>
-      <label><input type="checkbox" name="triptype" value="Cultural"> Cultural </label>
-      <label><input type="checkbox" name="triptype" value="Foodie"> Foodie </label>
-      <label><input type="checkbox" name="triptype" value="Adventure"> Adventure </label>
-      <label><input type="checkbox" name="triptype" value="Nature"> Nature </label>
-    </div>
-    </fieldset>
-    <fieldset>
-     <div>
-      <label>Please provide your Email:</label>
-      <input type="email" name="email">
-    </div>
-    <button type="submit">Save this trip</button>
-</form>
+  <label>Name (First and Last):</label>
+  <input type="text" name="fullname">
+</div>
 </fieldset>
+
+<fieldset>
+<div>
+  <label>Email:</label>
+  <input type="email" name="email">
+</div>
+
+<div>
+  <label>Places to visit:</label>
+  <select name="country">
+    <option value="North America">Canada</option>
+    <option value="Asia">Japan</option>
+    <option value="UK">Northern Ireland</option>
+  </select>
+</div>
+
+<div>
+  <label>When would you like to go?</label>
+  <input type="date" name="startdate">
+</div>
+
+<div>
+  <label>When would you like to return?</label>
+  <input type="date" name="returndate">
+</div>
+
+<div>
+  <label><input type="checkbox" name="triptype" value="Cultural">Cultural</label>
+  <label><input type="checkbox" name="triptype" value="Foodie">Foodie</label>
+  <label><input type="checkbox" name="triptype" value="Adventure">Adventure</label>
+  <label><input type="checkbox" name="triptype" value="nature">Nature</label>
+</div>  
+</fieldset>
+
+<fieldset>
+  <div>
+    <input type="checkbox" name="ready" value="agree">
+    I am ready to go on this vacation.
+  </div>
+</fieldset>
+
+<button type="submit">Let's go on the vacation!</button>
+</form>
 </body>
 </html>
