@@ -5,3 +5,8 @@
 * submit - turns in the form
 * date - recognizes what a proper date looks like
 * checkbox -allows user to select a box
+
+#Form Tags
+* input - allows user to input new information
+* option - allows user to select from choices
+* button - allows user to do an action
