@@ -1,5 +1,4 @@
 Robot figuring out which floor button to press on elevator:
-
 -When elevator door opens, check to see whether it is going up or down.
  -If the elevator is not going in the direction you are headed, wait for the next elevator door to open.
  -Until an elevator heading in your desired direction opens:
@@ -12,3 +11,10 @@ Robot figuring out which floor button to press on elevator:
  -While in the elevator, every time the door opens, look up to see what floor you are currently on.
  -Until the door opens on your desired floor, stay inside the elevator.
  -When the elevator door opens on your desired floor, exit the elevator.
+
+Crossing the street:
+Locate traffic lights and notice the color of the light.
+Until light turns green:
+ -stand still and do not cross.
+If light turns green:
+ -cross the street.
