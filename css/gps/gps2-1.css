@@ -1,9 +1,9 @@
 header {
-  background-color: blue;
   font-family: helvetica;
   font-size: 20px;
   padding: .6em .6em 1em 1em;
   margin: 10px;
+  background-image: url('http://edwinhernandez.com/wp-content/uploads/2015/11/github.png');
 }
 
 h1 {
