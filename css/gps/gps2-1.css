@@ -8,6 +8,19 @@ header {
   border-top: 10px solid #EEEEEE;
 }
 
+footer {
+  width: 90%;
+  background-image: url('github_pic.png');
+  font-family: helvetica;
+  color: #EEEEEE;
+  clear:both;
+  padding: 1em 1em 2em 2em;
+  margin: auto;
+  text-align: center;
+  margin-top: 5px;
+
+}
+
 h1 {
   text-align: center;
   font-family: helvetica;
@@ -31,17 +44,6 @@ h1 {
   float: right;
   margin-right: 3em;
   margin-bottom: 3em;
-}
-
-footer {
-  width: 90%;
-  clear:both;
-  display: block;
-  padding: 1em 1em 2em 2em;
-  font-family: helvetica;
-  margin-top: 5px;
-  text-align: center;
-  background-image: url('github_pic.png');
 }
 
 article {
