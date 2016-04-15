@@ -1,6 +1,5 @@
 header {
   font-family: helvetica;
-  font-size: 20px;
   padding: .6em .6em 1em 1em;
   margin: 10px;
   background-image: url('http://edwinhernandez.com/wp-content/uploads/2015/11/github.png');
@@ -9,8 +8,20 @@ header {
 h1 {
   text-align: center;
   font-family: helvetica;
-  font-size: 64px;
+  font-size: 4em;
   margin-top: -5px;
+}
+
+a {
+  color: #AAAAAA;
+}
+
+a:visited {
+  color: #DDDDDD;
+}
+
+a:hover {
+  color: #CCCCCC;
 }
 
 .column-1 {
@@ -35,4 +46,8 @@ footer {
   font-family: helvetica;
   margin-top: 5px;
   text-align: center;
+}
+
+code {
+  background-color: #EEEEEE;
 }
