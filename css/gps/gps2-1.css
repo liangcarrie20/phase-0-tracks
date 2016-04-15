@@ -52,12 +52,6 @@ header > h1 {
   margin-bottom: 35px;
 }
 
-header > p {
-  color: #F9F9F9;
-  width: 80%
-  margin: auto;
-}
-
 a {
   color: #AAAAAA;
 }
@@ -72,4 +66,10 @@ a:hover {
 
 code {
   background-color: #EEEEEE;
+}
+
+@media screen and (max-width: 860px) {
+    h1 {
+        font-size: 3em;
+    }
 }
