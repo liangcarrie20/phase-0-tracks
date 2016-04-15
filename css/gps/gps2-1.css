@@ -1,28 +1,19 @@
 header {
-  font-family: helvetica;
-  padding: .6em .6em 1em 1em;
-  margin: 10px;
+  width: 90%;
   background-image: url('github_pic.png');
-  color: white;
+  font-family: helvetica;
+  color: #EEEEEE;
+  padding: 2em .6em 1em 1em;
+  margin: auto;
+  border-top: 10px solid #EEEEEE;
 }
 
 h1 {
   text-align: center;
   font-family: helvetica;
   font-size: 4em;
-  margin-top: -5px;
-}
-
-a {
-  color: #AAAAAA;
-}
-
-a:visited {
-  color: #DDDDDD;
-}
-
-a:hover {
-  color: #CCCCCC;
+  margin-top: -15px;
+  height: 55px;
 }
 
 .column-1 {
@@ -47,6 +38,36 @@ footer {
   margin-top: 5px;
   text-align: center;
   background-image: url('github_pic.png');
+}
+
+article {
+  margin-top: 2em;
+}
+
+article > h2 {
+  margin-bottom: -11px;
+}
+
+header > h1 {
+  margin-bottom: 35px;
+}
+
+header > p {
+  color: #F9F9F9;
+  width: 80%
+  margin: auto;
+}
+
+a {
+  color: #AAAAAA;
+}
+
+a:visited {
+  color: #DDDDDD;
+}
+
+a:hover {
+  color: #CCCCCC;
 }
 
 code {
