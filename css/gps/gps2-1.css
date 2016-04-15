@@ -3,6 +3,7 @@ header {
   padding: .6em .6em 1em 1em;
   margin: 10px;
   background-image: url('github_pic.png');
+  color: white;
 }
 
 h1 {
