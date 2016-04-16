@@ -7,6 +7,10 @@ fur = gets.chomp
 puts "Is this hamster a good candidate for adoption?"
 adoptable = gets.chomp
 puts "How old is the hamster?"
-age = gets.chomp.to_i
-
+age = gets.strip
+if age.empty?
+	age = nil
+else
+	age = age.to_i
+end
 puts "#{name} is this a #{fur} colored hamster and is this loud: #{volume}.  It is #{age} years old.  Do we think #{name} is good for adoption?  Definitely #{adoptable}!"
