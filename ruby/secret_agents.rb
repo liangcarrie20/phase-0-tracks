@@ -1,8 +1,8 @@
 # encrypt method
 # INPUT: password
 # OUTPUT: password that's advanced one letter forward for each letter
-# example inputs: abc, zed, bcd, afe (STRING)
-# example outputs: bcd, afe, abc, zed (STRING)
+# example inputs: abc, zed (STRING)
+# example outputs: bcd, afe (STRING)
 
 #define method
 def encrypt (password)
@@ -12,5 +12,3 @@ end
 
 puts encrypt("abc")
 puts encrypt("zed")
-puts encrypt("bcd")
-puts encrypt("afe")
