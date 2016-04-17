@@ -40,12 +40,23 @@ def decrypt(password)
 	i = 0
 	convert = ""
 	length = password.length
-	alphabet = "abcdefghijklmnopqrstuvqxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+	alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 	for i in 0...length
-		password_index = password[i]
-		string_number = alphabet.index(password_index) - 1
-		convert = convert.chomp("Z")
-		convert += "z"
+		pass_index = password[i]
+		str_num = alphabet.index(pass_index) - 1
+		convert += alphabet[str_num]
+		if password[i] == "a"
+			convert = convert.chomp("Z")
+			convert += "z"
+		end
+		if password[i] == "A"
+			convert = convert.chomp("z")
+			convert += "Z"
+		end
 	end
+return convert
 end
+
+puts decrypt("bcd")
+puts decrypt("afe")
