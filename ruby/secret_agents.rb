@@ -60,3 +60,6 @@ end
 
 puts decrypt("bcd")
 puts decrypt("afe")
+# print decrypt(encrypt("swordfish"))
+p decrypt(encrypt("swordfish"))
+# The nested method for this call workds because it is assessed from right to left, filling in the variables as it moves left.
