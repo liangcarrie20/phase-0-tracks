@@ -5,9 +5,10 @@
 # example outputs: bcd, afe, abc, zed (STRING)
 
 #define method
-def encrypt
+def encrypt (password)
 	#do something
-	puts "enter your password"
+	password.next
 end
-encrypt
-encrypt
+
+puts encrypt("abc")
+puts encrypt("bcd")
