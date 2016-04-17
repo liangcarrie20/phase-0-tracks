@@ -36,3 +36,5 @@ puts encrypt("zed")
 	#translate back into alphabet string
 	#add to convert
 
+def decrypt(password)
+end
