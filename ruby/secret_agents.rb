@@ -7,10 +7,10 @@
 #define method
 def encrypt (password)
 	#index each letter and use next
-	p password[0].next
-	p password[1].next
-	p password[2].next
+	password[0].next + password[1].next + password[2].next
 end
 
 puts encrypt("abc")
+puts encrypt("zed")
 puts encrypt("bcd")
+puts encrypt("afe")
