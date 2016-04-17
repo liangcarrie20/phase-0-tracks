@@ -37,4 +37,9 @@ puts encrypt("zed")
 	#add to convert
 
 def decrypt(password)
+	i = 0
+	convert =""
+	length = password.length
+	alphabet = "abcdefghijklmnopqrstuvqxyz"
+
 end
