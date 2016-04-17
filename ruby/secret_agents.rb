@@ -38,8 +38,14 @@ puts encrypt("zed")
 
 def decrypt(password)
 	i = 0
-	convert =""
+	convert = ""
 	length = password.length
-	alphabet = "abcdefghijklmnopqrstuvqxyz"
+	alphabet = "abcdefghijklmnopqrstuvqxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
+	for i in 0...length
+		password_index = password[i]
+		string_number = alphabet.index(password_index) - 1
+		convert = convert.chomp("Z")
+		convert += "z"
+	end
 end
