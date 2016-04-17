@@ -6,8 +6,10 @@
 
 #define method
 def encrypt (password)
-	#do something
-	password.next
+	#index each letter and use next
+	password[0].next
+	password[1].next
+	password[2].next
 end
 
 puts encrypt("abc")
