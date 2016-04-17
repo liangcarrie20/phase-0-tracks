@@ -21,7 +21,27 @@ until interviews == num_employees
 	garlic = gets.chomp
 
 	puts "Would you like to enroll in the company's health insurance? (y/n)"
-	insurance = gets.chomp			
+	insurance = gets.chomp
+
+	allergy_done = false
+
+		until allergy_done
+
+			puts "Name your allergies, if none, type done."
+
+			allergy = gets.chomp
+
+			if allergy == "sunshine"
+				puts "Probably a vampire"
+				allergy_done = true
+			elsif allergy == "done"
+				puts "Okay thank you."
+				allergy_done = true
+			else
+				puts "Any other allergies?"
+			end
+
+		end										
 
 		if name == "Drake Cula"
 			puts "Definitely a vampire."
