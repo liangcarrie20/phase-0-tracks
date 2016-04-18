@@ -89,4 +89,4 @@ until valid_iput
 end
 
 #print password
-puts "You entered #{response}, the result is #{password}."
+puts "You chose to have your password #{response}, the result is #{password}."
