@@ -80,7 +80,7 @@ until valid_iput
 	if response == "encrypted"
 		password = encrypt(password)
 		valid_iput = true
-	elsif response = "decrypted"
+	elsif response == "decrypted"
 		password = decrypt(password)
 		valid_iput = true
 	else puts "Please choose to have your password 'encrypted' or 'decrypted'"
@@ -88,6 +88,5 @@ until valid_iput
 	end
 end
 
-
-
 #print password
+puts "You entered #{response}, the result is #{password}."
