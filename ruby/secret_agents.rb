@@ -75,4 +75,19 @@ puts "Would you like to have your password encrypted or decrypted?"
 response = gets.chomp
 
 #either encrypt or decrypt password
+valid_iput = false
+until valid_iput
+	if response == "encrypted"
+		password = encrypt(password)
+		valid_iput = true
+	elsif response = "decrypted"
+		password = decrypt(password)
+		valid_iput = true
+	else puts "Please choose to have your password 'encrypted' or 'decrypted'"
+		response = gets.chomp
+	end
+end
+
+
+
 #print password
