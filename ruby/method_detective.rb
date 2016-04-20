@@ -19,7 +19,7 @@ puts "Stop! You’re under arrest!".upcase
 puts "the usual". + " suspects".to_s
 #=> "the usual suspects"
 
-# " suspects".<???>
+puts " suspects".prepend("the usual")
 # => "the usual suspects"
 
 puts "The case of the disappearing last letter".chop
