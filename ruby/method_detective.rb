@@ -10,7 +10,7 @@
 # "zom".<???>
 # => “zoom”
 
-# "enhance".<???>
+puts "enhance".center(15)
 # => "    enhance    "
 
 puts "Stop! You’re under arrest!".upcase
