@@ -25,7 +25,7 @@ puts "the usual". + " suspects".to_s
 puts "The case of the disappearing last letter".chop
 # => "The case of the disappearing last lette"
 
-# "The mystery of the missing first letter".<???>
+puts "The mystery of the missing first letter".slice(1..-1)
 # => "he mystery of the missing first letter"
 
 # "Elementary,    my   dear        Watson!".<???>
