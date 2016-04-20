@@ -7,7 +7,7 @@
 puts "iNvEsTiGaTiOn".swapcase
 # => “InVeStIgAtIoN”
 
-# "zom".<???>
+puts "zom".insert(1, 'o')
 # => “zoom”
 
 puts "enhance".center(15)
@@ -31,7 +31,7 @@ puts "The mystery of the missing first letter".slice(1..-1)
 puts "Elementary,    my   dear        Watson!".gsub(/\s+/, " ")
 # => "Elementary, my dear Watson!"
 
-# "z".<???>
+puts "z".ord
 # => 122 
 # (What is the significance of the number 122 in relation to the character z?)
 
