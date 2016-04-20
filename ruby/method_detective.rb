@@ -16,7 +16,7 @@
 puts "Stop! You’re under arrest!".upcase
 # => "STOP! YOU’RE UNDER ARREST!"
 
-# "the usual".<???>
+puts "the usual". + " suspects".to_s
 #=> "the usual suspects"
 
 # " suspects".<???>
