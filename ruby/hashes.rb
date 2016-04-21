@@ -1,3 +1,4 @@
+# Initialize empty hash
 # Ask interior designer to enter client's name (string)
 # Ask interior designer to enter client's age (integer)
 	# Convert input to integer
