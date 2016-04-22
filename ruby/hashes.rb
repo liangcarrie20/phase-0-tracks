@@ -21,23 +21,47 @@ client_info[:theme] = gets.chomp
 
 # Ask interior designer to enter whether or not client likes chandeliers (boolean)
 puts "The client like chandeliers: true/false?"
-	# Convert input to boolean
 client_info[:likes_chandeliers] = gets.chomp
+	# Convert input to boolean
+	case client_info[:likes_chandeliers]
+	when 'true', 'True', 'y', 'Y', 'yes', 'Yes'
+		client_info[:likes_chandeliers] = true
+	when 'false', 'False', 'n', 'N', 'no', 'No'
+		client_info[:likes_chandeliers] = false
+	end
 
 # Ask interior designer to enter whether or not client likes lime green paint (boolean)
 puts "The client like lime green paint: true/false?"
-	# Convert input to boolean
 client_info[:likes_limegreen] = gets.chomp
+	# Convert input to boolean
+	case client_info[:likes_limegreen]
+	when 'true', 'True', 'y', 'Y', 'yes', 'Yes'
+		client_info[:likes_limegreen] = true
+	when 'false', 'False', 'n', 'N', 'no', 'No'
+		client_info[:likes_limegreen] = false
+	end
 
 # Ask interior designer to enter whether or not client likes purple (boolean)
 puts "The client like purple: true/false?"
-	# Convert input to boolean
 client_info[:likes_purple] = gets.chomp
+	# Convert input to boolean
+	case client_info[:likes_purple]
+	when 'true', 'True', 'y', 'Y', 'yes', 'Yes'
+		client_info[:likes_purple] = true
+	when 'false', 'False', 'n', 'N', 'no', 'No'
+		client_info[:likes_purple] = false
+	end	
 
 # Ask interior designer to enter whether or not client likes red (boolean)
 puts "The client like red: true/false?"
-	# Convert input to boolean
 client_info[:likes_red] = gets.chomp
+	# Convert input to boolean
+	case client_info[:likes_red]
+	when 'true', 'True', 'y', 'Y', 'yes', 'Yes'
+		client_info[:likes_red] = true
+	when 'false', 'False', 'n', 'N', 'no', 'No'
+		client_info[:likes_red] = false
+	end
 
 # Print hash when interior designer completed all questions
 p client_info
