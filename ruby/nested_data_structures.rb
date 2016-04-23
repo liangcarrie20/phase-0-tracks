@@ -54,3 +54,7 @@ p shopping_mall[:third_floor][:store_directory][2]
 shopping_mall[:third_floor][:store_directory].push('baldo_shoes')
 shopping_mall[:third_floor][:unit_info][:units_available] = 4
 p shopping_mall[:third_floor]
+
+# reverse store directory list of second floor
+shopping_mall[:second_floor][:store_directory].reverse!
+p shopping_mall[:second_floor][:store_directory]
