@@ -47,5 +47,10 @@ p shopping_mall[:first_floor][:category]
 # Access list of stores on second floor:
 p shopping_mall[:second_floor][:store_directory]
 
-# call store index number 2 on third floor:
+# name store index number 2 on third floor:
 p shopping_mall[:third_floor][:store_directory][2]
+
+# add a store to the third floor, and update unit info:
+shopping_mall[:third_floor][:store_directory].push('baldo_shoes')
+shopping_mall[:third_floor][:units_available] = 4
+p shopping_mall[:third_floor]
