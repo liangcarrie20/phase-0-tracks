@@ -8,5 +8,7 @@ p name
 # reverse the array
 name.reverse!
 p name
+
 # change vowels to the next vowel (convert "u" to "a")
 # change consonants to the next consonant (convert "z" to "b")
+# define method of encryption
