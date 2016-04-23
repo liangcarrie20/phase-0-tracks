@@ -52,5 +52,5 @@ p shopping_mall[:third_floor][:store_directory][2]
 
 # add a store to the third floor, and update unit info:
 shopping_mall[:third_floor][:store_directory].push('baldo_shoes')
-shopping_mall[:third_floor][:units_available] = 4
+shopping_mall[:third_floor][:unit_info][:units_available] = 4
 p shopping_mall[:third_floor]
