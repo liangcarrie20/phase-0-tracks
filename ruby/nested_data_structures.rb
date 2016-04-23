@@ -46,3 +46,6 @@ p shopping_mall[:first_floor][:category]
 
 # Access list of stores on second floor:
 p shopping_mall[:second_floor][:store_directory]
+
+# call store index number 2 on third floor:
+p shopping_mall[:third_floor][:store_directory][2]
