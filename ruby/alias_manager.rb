@@ -6,9 +6,10 @@
 # Turn user's first and last name into an array
 def spy_alias
 	puts "What is your first and last name?"
-	real_name = gets.chomp.downcase
-	name_list = []
-	name_list << real_name
+	real_name = gets.chomp.downcase # (string)
+	name_list = [] # empty array
+	name_list << real_name # put real name into name list array
+	full_name_list = [] # empty array for storing first and last name
 end
 
 # Swap first and last name
