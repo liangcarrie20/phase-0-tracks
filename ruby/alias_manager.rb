@@ -7,6 +7,8 @@
 def spy_alias
 	puts "What is your first and last name?"
 	real_name = gets.chomp.downcase
+	name_list = []
+	name_list << real_name
 end
 
 # Swap first and last name
