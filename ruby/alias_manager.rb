@@ -5,10 +5,14 @@
 # Ask user to enter first and last name, making input downcase (string)
 # Turn user's first and last name into an array
 def spy_alias (first_name, last_name)
+	full_name = []
 	puts "What is your first name?"
 	first_name = gets.chomp.downcase # (string)
+	full_name << first_name
 	puts "What is your last name?"
 	last_name = gets.chomp.downcase
+	full_name << last_name
+	full_name.reverse!
 end
 
 # Swap first and last name
