@@ -1,8 +1,12 @@
 # Input: spy's real name (string)
 # Output: spy's spy name (string)
 
-# Ask user to enter first and last name (string)
+# define method for: 
+# Ask user to enter first and last name, making input downcase (string)
 # Turn user's first and last name into an array
+def spy_alias
+end
+
 # Swap first and last name
 	# Reverse the order of the array
 
@@ -14,4 +18,4 @@
 	#  " " to " "
 	# else letter.next
 
-# print out secret agent name
+# print out secret agent name and capitalize
