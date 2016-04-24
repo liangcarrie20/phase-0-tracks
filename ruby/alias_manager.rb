@@ -21,7 +21,7 @@ def spy_alias
 	name_list << name
 	alias_names = []
 
-	until name == "quit"
+	while name != "quit"
 		new_alias = name.split (' ')
 		new_alias.reverse!
 		new_alias = new_alias.join(' ')
