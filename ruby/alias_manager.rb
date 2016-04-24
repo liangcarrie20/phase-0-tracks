@@ -4,7 +4,7 @@
 # define method for: 
 # Ask user to enter first and last name, making input downcase (string)
 # Turn user's first and last name into an array
-def spy_alias
+def spy_alias (first_name, last_name)
 	puts "What is your first and last name?"
 	real_name = gets.chomp.downcase # (string)
 	name_list = [] # empty array
