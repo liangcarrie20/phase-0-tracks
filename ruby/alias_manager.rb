@@ -1,14 +1,12 @@
-# ask agent for their real name
-# set name variable equal to a string of the agent's name using gets.chomp
-# change first and last name string into an array of words using split(' ')
-# reverse the array
-# convert back to string
-puts "What is your first and last name?"
-name = gets.chomp.split.reverse!.join(' ')
-p name
+# Input: spy's real name (string)
+# Output: spy's spy name (string)
 
-# method to change vowels to the next vowel (convert "u" to "a")
+# Swap first and last name
+	# take user input and turn into array
+	# reverse the array
 
+# change vowels to next vowel
+	# define a method to do this
 
-# change consonants to the next consonant (convert "z" to "b")
-# define method of encryption
+# change consonants to next consonant
+	# define a method to do this
