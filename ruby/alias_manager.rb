@@ -6,10 +6,11 @@
 def spy_alias
 	puts "What is your full name?"
 	name = gets.chomp
-	name_list = []
+	name_list = [] # create empty array
 	name_list << name # Turn user's first and last name into an array
 	alias_names = []
 
+#  lets user enter names and get a fake name back repeatedly until they decide to quit
 	until name == "quit"
 		new_alias = name.split(' ')
 		# Swap first and last name: reverse the order of the array
@@ -82,7 +83,7 @@ def spy_alias
 		name_list << name
 	end
 
-	name_list.pop # removes last element
+	name_list.pop # remove last element
 	list_length = name_list.length
 	list_length.times {|z| puts alias_names[z] + " is actually " + name_list[z]+"."}
 	# iterate block name_list.length times
