@@ -22,45 +22,47 @@ def spy_alias
 	alias_names = []
 
 	while name != "quit"
-		new_alias = name.split (' ')
-		new_alias.reverse!
+		new_alias = name.split(' ')
+		new_alias[0], new_alias[1] = new_alias[1], new_alias[0]
 		new_alias = new_alias.join(' ')
 		alias_string = new_alias.split('')
 
 		alias_string.map! do |letter|
 			if letter == "a"
-				letter == "e"
+				letter = "e"
 			elsif letter == "e"
-				letter == "i"
+				letter = "i"
 			elsif letter == "i"
-				letter == "o"
+				letter = "o"
 			elsif letter == "o"
-				letter == "u"
+				letter = "u"
 			elsif letter == "u"
-				letter == "a"
+				letter = "a"
 			elsif letter == "b"
-				letter == "d"
+				letter = "d"
 			elsif letter == "d"
-				letter == "f"
+				letter = "f"
 			elsif letter == "h"
-				letter == "j"
+				letter = "j"
 			elsif letter == "n"
-				letter == "p"
+				letter = "p"
 			elsif letter == "t"
-				letter == "v"
+				letter = "v"
 			elsif letter == "z"
-				letter == "b"
+				letter = "b"
+			elsif letter == " "
+				letter = " "
 			else
 				letter.next
 			end
 		end
 
 		spy_name = alias_string.join('')
-
+		puts spy_name
 		alias_names << spy_name
-		puts "Please enter a name again, or enter 'quit'"
-		last_name = gets.chomp.downcase
-		name_list << spy_name
+		puts "Please enter a name again, or enter 'quit' to finish."
+		name = gets.chomp.downcase
+		name_list << name
 	end
 
 	name_list.pop
