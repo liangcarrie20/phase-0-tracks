@@ -14,21 +14,20 @@
 	#  b to d, d to f, h to j, n to p, t to v, z to b
 	#  " " to " "
 	# else letter.next
-def spy_alias (first_name, last_name)
-	full_name = []
-	puts "What is your first name?"
-	first_name = gets.chomp.downcase # (string)
-	full_name << first_name
-	puts "What is your last name?"
-	last_name = gets.chomp.downcase
-	full_name << last_name
-	full_name.reverse!
+def spy_alias
+	puts "What is your full name?"
+	name = gets.chomp.downcase
+	name_list = []
+	name_list << name
+	alias_names = []
 
-	until first_name == "quit"
-		spy_name = full_name.join(' ') #turn name back into string
-		name_string = full_name.split('') #split string to array of letters"
+	until name == "quit"
+		new_alias = name.split (' ')
+		new_alias.reverse!
+		new_alias = new_alias.join(' ')
+		alias_string = new_alias.split('')
 
-		name_string.map! do |letter|
+		alias_string.map! do |letter|
 			if letter == "a"
 				letter == "e"
 			elsif letter == "e"
@@ -55,7 +54,18 @@ def spy_alias (first_name, last_name)
 				letter.next
 			end
 		end
-	end
-end
 
+		spy_name = alias_string.join('')
+
+		alias_names << spy_name
+		puts "Please enter a name again, or enter 'quit'"
+		last_name = gets.chomp.downcase
+		name_list << spy_name
+	end
+
+	name_list.pop
+	x = name_list.length
+	x.times {|z| puts alias_names[z] + " is actually " + name_list[z]+"."}
+end
+spy_alias
 # print out secret agent name and change case
