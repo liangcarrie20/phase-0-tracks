@@ -3,30 +3,26 @@
 
 # define method for: 
 # Ask user to enter first and last name, making input downcase (string)
-# Turn user's first and last name into an array
-# Swap first and last name
-	# Reverse the order of the array
-
-# change vowels to next vowel
-# change consonants to next consonant
-	# iterate through name changing using if/elsif/else
-	# a to e, e to i, i to o, o to u, u to a
-	#  b to d, d to f, h to j, n to p, t to v, z to b
-	#  " " to " "
-	# else letter.next
 def spy_alias
 	puts "What is your full name?"
 	name = gets.chomp
 	name_list = []
-	name_list << name
+	name_list << name # Turn user's first and last name into an array
 	alias_names = []
 
-	while name != "quit"
+	until name == "quit"
 		new_alias = name.split(' ')
+		# Swap first and last name: reverse the order of the array
 		new_alias[0], new_alias[1] = new_alias[1], new_alias[0]
 		new_alias = new_alias.join(' ')
 		alias_string = new_alias.split('')
-
+		# change vowels to next vowel
+		# change consonants to next consonant
+			# iterate through name changing using if/elsif/else
+			# a to e, e to i, i to o, o to u, u to a AND for capital letters
+			#  b to d, d to f, h to j, n to p, t to v, z to b AND for capital letters
+			#  " " to " "
+			# else letter.next
 		alias_string.map! do |letter|
 			if letter == "a"
 				letter = "e"
@@ -78,7 +74,7 @@ def spy_alias
 				letter.next
 			end
 		end
-
+# Use a data structure to store the fake names as they are entered.
 		spy_name = alias_string.join('')
 		puts spy_name
 		alias_names << spy_name
@@ -87,9 +83,10 @@ def spy_alias
 		name_list << name
 	end
 
-	name_list.pop
-	x = name_list.length
-	x.times {|z| puts alias_names[z] + " is actually " + name_list[z]+"."}
+	name_list.pop # removes last element
+	list_length = name_list.length
+	list_length.times {|z| puts alias_names[z] + " is actually " + name_list[z]+"."}
+	# iterate block name_list.length times
 end
 spy_alias
 # print out secret agent name and change case
