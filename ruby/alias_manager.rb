@@ -16,7 +16,7 @@
 	# else letter.next
 def spy_alias
 	puts "What is your full name?"
-	name = gets.chomp.downcase
+	name = gets.chomp
 	name_list = []
 	name_list << name
 	alias_names = []
@@ -30,26 +30,48 @@ def spy_alias
 		alias_string.map! do |letter|
 			if letter == "a"
 				letter = "e"
+			elsif letter == "A"
+				letter = "E"
 			elsif letter == "e"
 				letter = "i"
+			elsif letter == "E"
+				letter = "I"
 			elsif letter == "i"
 				letter = "o"
+			elsif letter == "I"
+				letter = "O"
 			elsif letter == "o"
 				letter = "u"
+			elsif letter == "O"
+				letter = "U"
 			elsif letter == "u"
 				letter = "a"
+			elsif letter == "U"
+				letter = "A"
 			elsif letter == "b"
 				letter = "d"
+			elsif letter == "B"
+				letter = "D"
 			elsif letter == "d"
 				letter = "f"
+			elsif letter == "D"
+				letter = "F"
 			elsif letter == "h"
 				letter = "j"
+			elsif letter == "H"
+				letter = "J"
 			elsif letter == "n"
 				letter = "p"
+			elsif letter == "N"
+				letter = "P"
 			elsif letter == "t"
 				letter = "v"
+			elsif letter == "T"
+				letter = "V"
 			elsif letter == "z"
 				letter = "b"
+			elsif letter == "Z"
+				letter = "B"
 			elsif letter == " "
 				letter = " "
 			else
@@ -61,7 +83,7 @@ def spy_alias
 		puts spy_name
 		alias_names << spy_name
 		puts "Please enter a name again, or enter 'quit' to finish."
-		name = gets.chomp.downcase
+		name = gets.chomp
 		name_list << name
 	end
 
