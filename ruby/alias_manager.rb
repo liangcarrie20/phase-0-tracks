@@ -13,6 +13,12 @@ def spy_alias (first_name, last_name)
 	last_name = gets.chomp.downcase
 	full_name << last_name
 	full_name.reverse!
+
+	until first_name == "quit"
+		spy_name = full_name.join(' ')
+		name_string = full_name.split('')
+	end
+
 end
 
 # Swap first and last name
