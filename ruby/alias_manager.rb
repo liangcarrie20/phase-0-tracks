@@ -76,7 +76,6 @@ def spy_alias
 		end
 # Use a data structure to store the fake names as they are entered.
 		spy_name = alias_string.join('')
-		puts spy_name
 		alias_names << spy_name
 		puts "Please enter a name again, or enter 'quit' to finish."
 		name = gets.chomp
@@ -88,5 +87,6 @@ def spy_alias
 	list_length.times {|z| puts alias_names[z] + " is actually " + name_list[z]+"."}
 	# iterate block name_list.length times
 end
+
+#run method
 spy_alias
-# print out secret agent name and change case
