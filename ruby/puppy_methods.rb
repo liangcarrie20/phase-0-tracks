@@ -50,3 +50,23 @@ spike.dog_years(3)
 
 # verify sit
 spike.sit
+
+# desing new class: rabbit
+class Rabbit
+
+	# def initialize method
+	def initialize
+		puts "Here's a new rabbit ..."
+	end
+
+	# def hop method
+	def hop(num_hops)
+		puts "Hopped #{num_hops} times!"
+	end
+
+	# def eat_carrot method
+	def eat_carrot
+		puts "Ate a carrot."
+	end
+	
+end
