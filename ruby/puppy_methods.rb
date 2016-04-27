@@ -72,14 +72,20 @@ class Rabbit
 end
 
 # verify Rabbit methods
-cotton = Rabbit.new
-cotton.hop(3)
-cotton.eat_carrot
+# cotton = Rabbit.new
+# cotton.hop(3)
+# cotton.eat_carrot
 
 # create empty array to store instances of Rabbit
-bunny = []
+rabbit_list = []
 
 # use loop to make 50 instances of Rabbit
 for i in 0..49
-	bunny [i] = Rabbit.new
+	rabbit_list [i] = Rabbit.new
+end
+
+# iterate through structure using .each
+rabbit_list.each do |rabbit|
+	rabbit.hop(2)
+	rabbit.eat_carrot
 end
