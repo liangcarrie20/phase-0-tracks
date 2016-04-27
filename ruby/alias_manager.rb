@@ -6,16 +6,22 @@
 def spy_alias
 	puts "What is your full name?"
 	name = gets.chomp
-	name_list = [] # create empty array
+	name_list = [] # create empty array for real names
 	name_list << name # Turn user's first and last name into an array
-	alias_names = []
+	alias_names = [] # create empty array for alias names
 
 #  lets user enter names and get a fake name back repeatedly until they decide to quit
 	until name == "quit"
+		#turn first + last name into array
 		new_alias = name.split(' ')
+		# capitalize array values
+		new_alias.map!(&:capitalize)
 		# Swap first and last name: reverse the order of the array
 		new_alias[0], new_alias[1] = new_alias[1], new_alias[0]
+		p new_alias
+		# Turn new_alias into a string
 		new_alias = new_alias.join(' ')
+		#Turn string into array of letters"
 		alias_string = new_alias.split('')
 		# change vowels to next vowel
 		# change consonants to next consonant
