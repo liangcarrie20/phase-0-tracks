@@ -68,5 +68,10 @@ class Rabbit
 	def eat_carrot
 		puts "Ate a carrot."
 	end
-	
+
 end
+
+# verify Rabbit methods
+cotton = Rabbit.new
+cotton.hop(3)
+cotton.eat_carrot
