@@ -13,6 +13,7 @@ class Puppy
   # add roll_over method that prints "*rolls over*"
   def roll_over
   	puts "*rolls over*"
+  end
 
 end
 
