@@ -1,5 +1,10 @@
 class Puppy
 
+  # add initialize method
+  def initialize
+  	puts "Initializing new puppy instance ..."
+  end
+
   def fetch(toy)
     puts "I brought back the #{toy}!"
     toy
@@ -27,7 +32,7 @@ class Puppy
 
 end
 
-# driver codes
+# Puppy driver codes
 # initialize an instance of Puppy
 spike = Puppy.new
 
