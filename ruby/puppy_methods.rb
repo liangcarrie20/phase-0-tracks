@@ -20,6 +20,11 @@ class Puppy
   	puts human_years * 7
   end
 
+  # add sit method
+  def sit
+  	puts "*sits down*"
+  end
+
 end
 
 # driver codes
@@ -37,3 +42,6 @@ spike.roll_over
 
 # verify dog_years
 spike.dog_years(3)
+
+# verify sit
+spike.sit
