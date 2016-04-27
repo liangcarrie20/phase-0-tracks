@@ -75,3 +75,8 @@ end
 cotton = Rabbit.new
 cotton.hop(3)
 cotton.eat_carrot
+
+# use loop to make 50 instances of Rabbit
+for i in 0..49
+	i = Rabbit.new
+end
