@@ -7,8 +7,12 @@ class Puppy
 
   # add speak method that takes an integer & prints "Woof!"
   def speak(bark_number)
-  	bark_number.times {|i| p "Woof!"}
+  	bark_number.times {|i| puts "Woof!"}
   end
+
+  # add roll_over method that prints "*rolls over*"
+  def roll_over
+  	puts "*rolls over*"
 
 end
 
@@ -19,5 +23,8 @@ spike = Puppy.new
 # verify instance can fetch a ball
 spike.fetch("ball")
 
-#verify speak
+# verify speak
 spike.speak(5)
+
+# verify roll_over
+spike.roll_over
