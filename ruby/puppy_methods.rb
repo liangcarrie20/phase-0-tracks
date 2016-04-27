@@ -15,6 +15,11 @@ class Puppy
   	puts "*rolls over*"
   end
 
+  # add dog_years method that converts human_years to dog_years
+  def dog_years(human_years)
+  	puts human_years * 7
+  end
+
 end
 
 # driver codes
@@ -29,3 +34,6 @@ spike.speak(5)
 
 # verify roll_over
 spike.roll_over
+
+# verify dog_years
+spike.dog_years(3)
