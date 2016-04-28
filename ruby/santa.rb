@@ -3,8 +3,16 @@
 class Santa
 
 	# define initialize method
-	def initialize
+	# add gender, ethnicity to be passed in
+	def initialize(gender, ethnicity)
 		puts "Initializing Santa instance ..."
+		# add gender attribute
+		@gender = gender
+		# add ethnicity attribute
+		@ethnicity = ethnicity
+		# add reindeer_ranking attribute
+		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+		@age = 0
 	end
 
 	# define speak method
