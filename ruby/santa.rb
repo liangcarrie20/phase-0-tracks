@@ -39,3 +39,5 @@ example_ethnicities = ["red", "orange", "yellow", "green", "blue", "indigo", "vi
 example_genders.length.times do |i|
 	santas << Santa.new(example_genders[i], example_ethnicities[i])
 end
+# print santas array
+p santas
