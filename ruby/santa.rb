@@ -25,6 +25,18 @@ class Santa
 		puts "That was a good #{cookie_type}!"
 	end
 
+	# attribute to change Santa's age (getter)
+	def celebrate_birthday
+		@age = @age + 1
+	end
+
+	# attribute to move reindeer to last place in rankings (setter)
+	def get_mad_at(reindeer_name)
+		@reindeer_ranking.delete_if(reindeer_name)
+		@reindeer_ranking << reindeer_name
+	end
+
+
 end
 
 # check that santa can be initialized
@@ -39,5 +51,14 @@ example_ethnicities = ["red", "orange", "yellow", "green", "blue", "indigo", "vi
 example_genders.length.times do |i|
 	santas << Santa.new(example_genders[i], example_ethnicities[i])
 end
+
 # print santas array
+# p santas
+
+# test celebrate_birthday
+kris.celebrate_birthday
+p kris
+
+# test get_mad_at
+kris.get_mad_at("Rudolph")
 p santas
