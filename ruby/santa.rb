@@ -5,6 +5,7 @@ class Santa
 	# define initialize method
 	def initialize
 		puts "Initializing Santa instance ..."
+	end
 
 	# define speak method
 	def speak
