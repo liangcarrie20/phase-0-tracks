@@ -13,7 +13,6 @@ def make_list(items)
   return grocery_list
 end
 
-
 # Method to add an item to a list
 # input: item name and optional quantity
 # steps: two parameters. assign item parameter to key and quantity to value. default qty set to 1
@@ -22,8 +21,6 @@ def add_item(grocery_list, item, qty=1)
   grocery_list[item] = qty
   grocery_list
 end
-
-
 
 # Method to remove an item from the list
 # input: item as parameter
@@ -34,7 +31,6 @@ def remove_item(grocery_list, item)
   grocery_list
 end
 
-
 # Method to update the quantity of an item
 # input: two parameters: item and new quantity
 # steps: assign the value to whatever the item is equal to
@@ -44,8 +40,6 @@ def qty_change(grocery_list, item, qty)
   grocery_list
 end
 
-
-
 # Method to print a list and make it look pretty
 # input: no input
 # steps: iterate through hash, print message that shows items and qty.
@@ -54,7 +48,7 @@ def print_list(grocery_list)
   grocery_list.each {|item, qty| puts "Buy #{qty} #{item}"}
 end
 
-
+# test all methods
 shopping_list = make_list("apples oranges bannanas carrots")
 
 add_item(shopping_list, "lemonade", 2)
@@ -67,3 +61,12 @@ remove_item(shopping_list, "lemonade")
 qty_change(shopping_list, "ice cream", 1)
 
 print_list(shopping_list)
+
+# What did you learn about pseudocode from working on this challenge?
+  # I liked the example that was provided in this challenge.  It showed me that it is a good idea to include in the pseudocode what I need to add to the different parts of a method.
+# What are the tradeoffs of using arrays and hashes for this challenge?
+  # 
+# What does a method return?
+# What kind of things can you pass into methods as arguments?
+# How can you pass information between methods?
+# What concepts were solidified in this challenge, and what concepts are still confusing?
