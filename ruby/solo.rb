@@ -31,7 +31,8 @@ class Cat
 end
 
 # Verify Cat can be initialized
-cat = Cat.new("Marlon", "Bengal", "cuddly")
-cat.speak(2)
-cat.scratch("sofa")
-cat.eat("fish")
+cats = []
+example_breeds = ["Bengal", "Manx", "Munchkin", "Persian", "Siamese"]
+example_personalities = ["cuddly", "feisty", "independent"]
+
+cats << Cat.new("Marlon", example_breeds.sample, example_personalities.sample)
