@@ -11,6 +11,13 @@ class Cat
 		@age = 0
 	end
 # define method to make Cat meow
+	def speak(num)
+		puts "Meow " * num
+	end
 # define method to make Cat scratch
 # define method to make Cat eat(food)
 end
+
+# Verify Cat can be initialized
+cat = Cat.new("Bengal", "cuddly")
+cat.speak(2)
