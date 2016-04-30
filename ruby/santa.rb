@@ -31,26 +31,26 @@ class Santa
 	end
 
 	# attribute to move reindeer to last place in rankings (setter)
-	def get_mad_at(reindeer_name)
-		@reindeer_ranking.delete_if(reindeer_name)
-		@reindeer_ranking << reindeer_name
+	def get_mad_at(reindeer)
+		@reindeer_ranking.delete(reindeer)
+		@reindeer_ranking << reindeer
 	end
 
 
 end
 
-# check that santa can be initialized
+# check that santa can be initialized (driver code)
 kris = Santa.new("female", "North Polean")
 kris.speak
 kris.eat_milk_and_cookies("peanut butter cookie")
 
-# diverse initializations
-santas = []
-example_genders = ["female", "male", "bigender", "N/A", "gender variant", "female", "two-spirit"]
-example_ethnicities = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
-example_genders.length.times do |i|
-	santas << Santa.new(example_genders[i], example_ethnicities[i])
-end
+# diverse initializations (driver code)
+# santas = []
+# example_genders = ["female", "male", "bigender", "N/A", "gender variant", "female", "two-spirit"]
+# example_ethnicities = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
+# example_genders.length.times do |i|
+#	santas << Santa.new(example_genders[i], example_ethnicities[i])
+#end
 
 # print santas array
 # p santas
@@ -61,4 +61,4 @@ p kris
 
 # test get_mad_at
 kris.get_mad_at("Rudolph")
-p santas
+p kris
