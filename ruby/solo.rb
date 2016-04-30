@@ -15,9 +15,17 @@ class Cat
 		puts "Meow " * num
 	end
 # define method to make Cat scratch
+	def scratch(item)
+		puts "Cat scratched #{item}"
+	end
 # define method to make Cat eat(food)
+	def eat(food)
+		puts "Cat ate #{food}"
+	end
 end
 
 # Verify Cat can be initialized
 cat = Cat.new("Bengal", "cuddly")
 cat.speak(2)
+cat.scratch("sofa")
+cat.eat("fish")
