@@ -36,13 +36,21 @@ class Santa
 		@reindeer_ranking << reindeer
 	end
 
+	# getter methods for age and ethnicity
+	def age
+		@age
+	end
+
+	def ethnicity
+		@ethnicity
+	end
 
 end
 
 # check that santa can be initialized (driver code)
-kris = Santa.new("female", "North Polean")
-kris.speak
-kris.eat_milk_and_cookies("peanut butter cookie")
+santa = Santa.new("female", "North Polean")
+santa.speak
+santa.eat_milk_and_cookies("peanut butter cookie")
 
 # diverse initializations (driver code)
 # santas = []
@@ -56,9 +64,12 @@ kris.eat_milk_and_cookies("peanut butter cookie")
 # p santas
 
 # test celebrate_birthday
-kris.celebrate_birthday
-p kris
+santa.celebrate_birthday
+p santa
 
 # test get_mad_at
-kris.get_mad_at("Rudolph")
-p kris
+santa.get_mad_at("Rudolph")
+p santa
+
+# test getter methods
+puts " This Santa is #{santa.age} and is #{santa.ethnicity}."
