@@ -1,8 +1,8 @@
 # Define santa class
 
 class Santa
-	attr_reader :age, :ethnicity
-	attr_accessor :gender
+	attr_reader :ethnicity
+	attr_accessor :gender, :age
 
 	# define initialize method
 	# add gender, ethnicity to be passed in
@@ -55,9 +55,9 @@ class Santa
 end
 
 # check that santa can be initialized (driver code)
-santa = Santa.new("female", "North Polean")
-santa.speak
-santa.eat_milk_and_cookies("peanut butter cookie")
+# santa = Santa.new("female", "North Polean")
+# santa.speak
+# santa.eat_milk_and_cookies("peanut butter cookie")
 
 # diverse initializations (driver code)
 # santas = []
@@ -71,17 +71,30 @@ santa.eat_milk_and_cookies("peanut butter cookie")
 # p santas
 
 # test celebrate_birthday
-p santa
-santa.celebrate_birthday
-p santa
+# p santa
+# santa.celebrate_birthday
+# p santa
 
 # test get_mad_at
-santa.get_mad_at("Rudolph")
-p santa
+# santa.get_mad_at("Rudolph")
+# p santa
 
 # test getter methods
-puts " This Santa is #{santa.age} and is #{santa.ethnicity}."
+# puts " This Santa is #{santa.age} and is #{santa.ethnicity}."
 
 # test setter method
-santa.gender = "male"
-p santa
+# santa.gender = "male"
+# p santa
+
+# Release 4: Build Many, Many Santas
+santas = []
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+
+1000.times do
+	santas << Santa.new(example_genders.sample, example_ethnicities.sample)
+end
+
+santas.each {|santa| santa.age=rand(140)}
+
+santas.each {|santa| p "Santa is a #{santa.age} year old #{santa.ethnicity} #{santa.gender}."}
