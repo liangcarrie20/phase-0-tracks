@@ -36,7 +36,12 @@ class Santa
 		@reindeer_ranking << reindeer
 	end
 
-	# getter methods for age and ethnicity
+	# setter method (writable)
+	def gender=(new_gender)
+		@gender = new_gender
+	end
+
+	# getter methods for age and ethnicity (readable)
 	def age
 		@age
 	end
@@ -73,3 +78,7 @@ p santa
 
 # test getter methods
 puts " This Santa is #{santa.age} and is #{santa.ethnicity}."
+
+# test setter method
+santa.gender = "male"
+p santa
