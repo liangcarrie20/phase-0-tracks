@@ -1,6 +1,8 @@
 # Define santa class
 
 class Santa
+	attr_reader :ethnicity
+	attr_accessor :gender, :age
 
 	# define initialize method
 	# add gender, ethnicity to be passed in
@@ -25,40 +27,74 @@ class Santa
 		puts "That was a good #{cookie_type}!"
 	end
 
-	# attribute to change Santa's age (getter)
+	# attribute to change Santa's age
 	def celebrate_birthday
 		@age = @age + 1
 	end
 
 	# attribute to move reindeer to last place in rankings (setter)
-	def get_mad_at(reindeer_name)
-		@reindeer_ranking.delete_if(reindeer_name)
-		@reindeer_ranking << reindeer_name
+	def get_mad_at(reindeer)
+		@reindeer_ranking.delete(reindeer)
+		@reindeer_ranking << reindeer
 	end
 
+	# setter method (writable)
+#	def gender=(new_gender)
+#		@gender = new_gender
+#	end
+
+	# getter methods for age and ethnicity (readable)
+#	def age
+#		@age
+#	end
+
+#	def ethnicity
+#		@ethnicity
+#	end
 
 end
 
-# check that santa can be initialized
-kris = Santa.new("female", "North Polean")
-kris.speak
-kris.eat_milk_and_cookies("peanut butter cookie")
+# check that santa can be initialized (driver code)
+# santa = Santa.new("female", "North Polean")
+# santa.speak
+# santa.eat_milk_and_cookies("peanut butter cookie")
 
-# diverse initializations
-santas = []
-example_genders = ["female", "male", "bigender", "N/A", "gender variant", "female", "two-spirit"]
-example_ethnicities = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
-example_genders.length.times do |i|
-	santas << Santa.new(example_genders[i], example_ethnicities[i])
-end
+# diverse initializations (driver code)
+# santas = []
+# example_genders = ["female", "male", "bigender", "N/A", "gender variant", "female", "two-spirit"]
+# example_ethnicities = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
+# example_genders.length.times do |i|
+#	santas << Santa.new(example_genders[i], example_ethnicities[i])
+#end
 
 # print santas array
 # p santas
 
 # test celebrate_birthday
-kris.celebrate_birthday
-p kris
+# p santa
+# santa.celebrate_birthday
+# p santa
 
 # test get_mad_at
-kris.get_mad_at("Rudolph")
-p santas
+# santa.get_mad_at("Rudolph")
+# p santa
+
+# test getter methods
+# puts " This Santa is #{santa.age} and is #{santa.ethnicity}."
+
+# test setter method
+# santa.gender = "male"
+# p santa
+
+# Release 4: Build Many, Many Santas
+santas = []
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+
+1000.times do
+	santas << Santa.new(example_genders.sample, example_ethnicities.sample)
+end
+
+santas.each {|santa| santa.age=rand(140)}
+
+santas.each {|santa| p "Santa is a #{santa.age} year old #{santa.ethnicity} #{santa.gender}."}
