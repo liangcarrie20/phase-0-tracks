@@ -65,8 +65,12 @@ print_list(shopping_list)
 # What did you learn about pseudocode from working on this challenge?
   # I liked the example that was provided in this challenge.  It showed me that it is a good idea to include in the pseudocode what I need to add to the different parts of a method.
 # What are the tradeoffs of using arrays and hashes for this challenge?
-  # 
+  # I think using arrays and hash made it easier to access values and cut down on the amount of code that would have been needed to written.
 # What does a method return?
+	# A method returns the last result, or whatever explicit command
 # What kind of things can you pass into methods as arguments?
+	# You can pass hashes and arrays into methods as arguments
 # How can you pass information between methods?
+	# Hashes can be passed between methods using an external variable assigned to methods
 # What concepts were solidified in this challenge, and what concepts are still confusing?
+	# In this challenge I learned how to add string values as keys to a hash; earlier I only knew how to pass key values using symbols.
