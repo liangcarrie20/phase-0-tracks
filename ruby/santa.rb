@@ -1,6 +1,8 @@
 # Define santa class
 
 class Santa
+	attr_reader :age, :ethnicity
+	attr_accessor :gender
 
 	# define initialize method
 	# add gender, ethnicity to be passed in
@@ -25,7 +27,7 @@ class Santa
 		puts "That was a good #{cookie_type}!"
 	end
 
-	# attribute to change Santa's age (getter)
+	# attribute to change Santa's age
 	def celebrate_birthday
 		@age = @age + 1
 	end
@@ -37,18 +39,18 @@ class Santa
 	end
 
 	# setter method (writable)
-	def gender=(new_gender)
-		@gender = new_gender
-	end
+#	def gender=(new_gender)
+#		@gender = new_gender
+#	end
 
 	# getter methods for age and ethnicity (readable)
-	def age
-		@age
-	end
+#	def age
+#		@age
+#	end
 
-	def ethnicity
-		@ethnicity
-	end
+#	def ethnicity
+#		@ethnicity
+#	end
 
 end
 
@@ -69,6 +71,7 @@ santa.eat_milk_and_cookies("peanut butter cookie")
 # p santas
 
 # test celebrate_birthday
+p santa
 santa.celebrate_birthday
 p santa
 
