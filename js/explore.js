@@ -5,3 +5,11 @@
 // decrement i (i--)
 // have string[i] be added to reversedString
 // return reversedString
+
+function reverse(string) {
+	var reversedString = "";
+	for (var i=string.length -1; i >= 0; i--) {
+		reversedString += string[i];
+		return reversedString;
+	}
+}
