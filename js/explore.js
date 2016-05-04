@@ -13,3 +13,6 @@ function reverse(string) {
 		return reversedString;
 	}
 }
+
+// driver code to test reverse function
+reverse("hello");
