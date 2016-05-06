@@ -1,7 +1,7 @@
 # Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
-# We spent [#] hours on this challenge.
+# I worked on this challenge [by myself, with: Adam Spittler].
+# We spent [2] hours on this challenge.
 
 # EXPLANATION OF require_relative
 # require_relative: used for files you've written. used to access content within other files written.  You can pull a method written in another file into the current file.
@@ -90,6 +90,21 @@ end
 STATE_DATA.each do |key, value|
 	VirusPredictor.new(key, value[:population_density], value[:population]).virus_effects
 end
-
 #=======================================================================
 # Reflection Section
+# What are the differences between the two different hash syntaxes shown in the state_data file?
+# The hash uses a string for its key, and the keys within it are symbols.
+
+# What does require_relative do? How is it different from require?
+# require_relative: used for files you've written. used to access content within other files written.
+# You can pull a method written in another file into the current file.
+# require: is for plugins that other users have written
+
+# What are some ways to iterate through a hash?
+# we can use the .each method to iterate through a hash
+
+# When refactoring virus_effects, what stood out to you about the variables, if anything?
+# the initial code took arguments that could have been easily been accessed by including a attr_reader
+
+# What concept did you most solidify in this challenge?
+# This challenge helped me better understand how to iterate through complicated data structures.  It was good practice to look at such a complex data structure; I think this was the first time I've come across a hash within a hash
