@@ -24,7 +24,31 @@ function longestWord(words) {
 // If there is a match, test if values also match.
 // If true, return true.
 
+var hashOne = {name: 'Carrie', hometown: 'SF', age: 26 };
+var hashTwo = {name: 'Ringo', hometown: 'SF'};
+var hashThree = {name: 'Pepper', age: 1, puppy: true};
+
+function matchingKeyValuePair(firstHash, secondHash) {
+	for (var a in firstHash) {
+		for (var b in secondHash) {
+			if (a === b) {
+				if (firstHash[a] === secondHash[b]){
+					return true;
+				}
+			}
+		}
+	}
+	return false
+}
+
+
+
 
 // Test longestWord function
-console.log(longestWord(array))
-console.log(longestWord(names))
+console.log(longestWord(array));
+console.log(longestWord(names));
+
+// Test matchingKeyValuePair function
+
+console.log(matchingKeyValuePair(hashOne, hashTwo));
+console.log(matchingKeyValuePair(hashOne, hashThree));
