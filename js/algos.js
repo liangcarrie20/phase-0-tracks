@@ -41,14 +41,48 @@ function matchingKeyValuePair(firstHash, secondHash) {
 	return false
 }
 
+// Function: takes an integer for length, build & return array of strings of given length
+// run 10x using for loop
+function randomInteger(min,max) {
+	return Math.floor(Math.random() * (max - min)) + min;
+}
 
+function randomStringArray (length) {
+	this.randomWord = function() {
+		var alphabet = "abcdefghijklmnopqrstuvwxyz"
+		var stringLength = randomInteger(1,10);
+		var string = "";
+		for (i = 0; i < stringLength; i++) {
+			string = string + alphabet[randomInteger(0,25)];
+		}
+		return string;
+	}
+	var stringArray = [];
 
+	for (var count = 0; count <length; count ++) {
+		var word = this.randomWord();
+		stringArray.push(word);
+	}
+	return stringArray;
+}
+
+for (var instances = 0; instances < 10; instances++) {
+	var array = randomStringArray(5);
+	console.log((instances + 1) + ". Random word array: " + array);
+	console.log("The longest phrase is: " + longestWord[array]);
+}
+
+for (var instances = 0; instances < 10; instances++) {
+	var randomLength = randomInteger(3,9);
+	var array = randomStringArray(randomLength);
+	console.log((instances + 1) + ". Random word array: " + array);
+	console.log("The longest phrase is: " + longestWord(array));
+}
 
 // Test longestWord function
 console.log(longestWord(array));
 console.log(longestWord(names));
 
 // Test matchingKeyValuePair function
-
 console.log(matchingKeyValuePair(hashOne, hashTwo));
 console.log(matchingKeyValuePair(hashOne, hashThree));
