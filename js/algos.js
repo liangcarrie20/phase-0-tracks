@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Function for: FINDING THE LONGEST WORD:
 // loop through to find length of each array value
 // set i = 0 ; use FOR loop
@@ -86,3 +87,10 @@ console.log(longestWord(names));
 // Test matchingKeyValuePair function
 console.log(matchingKeyValuePair(hashOne, hashTwo));
 console.log(matchingKeyValuePair(hashOne, hashThree));
+=======
+var array = ["long phrase","longest phrase","longer phrase"];
+
+// Function for: FINDING THE LONGEST WORD:
+// loop through to find length of each array value
+// 
+>>>>>>> 985c1e0ad0239e59a2db6fefe1e3ac3e02b22edf
