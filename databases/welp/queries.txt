@@ -1,0 +1,103 @@
+You've joined two tables before. How do you join three?
+SELECT * FROM users, reviews, businesses WHERE reviews.business_id = businesses.id;
+1|Bradford|Pitt||5|great food!|1|1|1|Grundy Hollow Wedding Chapel
+2|Mandy|Kaling||5|great food!|1|1|1|Grundy Hollow Wedding Chapel
+3|Angela|Jolie||5|great food!|1|1|1|Grundy Hollow Wedding Chapel
+4|Steven|Wonder||5|great food!|1|1|1|Grundy Hollow Wedding Chapel
+5|Holly|Berry||5|great food!|1|1|1|Grundy Hollow Wedding Chapel
+6|Merryl|Streepman||5|great food!|1|1|1|Grundy Hollow Wedding Chapel
+7|Denzel|George||5|great food!|1|1|1|Grundy Hollow Wedding Chapel
+1|Bradford|Pitt||4|nice ambiance|4|2|4|Lotus Yoga
+2|Mandy|Kaling||4|nice ambiance|4|2|4|Lotus Yoga
+3|Angela|Jolie||4|nice ambiance|4|2|4|Lotus Yoga
+4|Steven|Wonder||4|nice ambiance|4|2|4|Lotus Yoga
+5|Holly|Berry||4|nice ambiance|4|2|4|Lotus Yoga
+6|Merryl|Streepman||4|nice ambiance|4|2|4|Lotus Yoga
+7|Denzel|George||4|nice ambiance|4|2|4|Lotus Yoga
+1|Bradford|Pitt||3|decent service|2|3|2|Amir's Towing
+2|Mandy|Kaling||3|decent service|2|3|2|Amir's Towing
+3|Angela|Jolie||3|decent service|2|3|2|Amir's Towing
+4|Steven|Wonder||3|decent service|2|3|2|Amir's Towing
+5|Holly|Berry||3|decent service|2|3|2|Amir's Towing
+6|Merryl|Streepman||3|decent service|2|3|2|Amir's Towing
+7|Denzel|George||3|decent service|2|3|2|Amir's Towing
+1|Bradford|Pitt||2|music not loud enough|3|4|3|The Beagle Nightclub
+2|Mandy|Kaling||2|music not loud enough|3|4|3|The Beagle Nightclub
+3|Angela|Jolie||2|music not loud enough|3|4|3|The Beagle Nightclub
+4|Steven|Wonder||2|music not loud enough|3|4|3|The Beagle Nightclub
+5|Holly|Berry||2|music not loud enough|3|4|3|The Beagle Nightclub
+6|Merryl|Streepman||2|music not loud enough|3|4|3|The Beagle Nightclub
+7|Denzel|George||2|music not loud enough|3|4|3|The Beagle Nightclub
+1|Bradford|Pitt||1|too expensive|5|5|5|Plumbing by Janet
+2|Mandy|Kaling||1|too expensive|5|5|5|Plumbing by Janet
+3|Angela|Jolie||1|too expensive|5|5|5|Plumbing by Janet
+4|Steven|Wonder||1|too expensive|5|5|5|Plumbing by Janet
+5|Holly|Berry||1|too expensive|5|5|5|Plumbing by Janet
+6|Merryl|Streepman||1|too expensive|5|5|5|Plumbing by Janet
+7|Denzel|George||1|too expensive|5|5|5|Plumbing by Janet
+1|Bradford|Pitt||5|fresh fish!|6|6|6|Sushi World
+2|Mandy|Kaling||5|fresh fish!|6|6|6|Sushi World
+3|Angela|Jolie||5|fresh fish!|6|6|6|Sushi World
+4|Steven|Wonder||5|fresh fish!|6|6|6|Sushi World
+5|Holly|Berry||5|fresh fish!|6|6|6|Sushi World
+6|Merryl|Streepman||5|fresh fish!|6|6|6|Sushi World
+7|Denzel|George||5|fresh fish!|6|6|6|Sushi World
+1|Bradford|Pitt||4|great prices|7|7|7|JoeBob's Sportz Barn
+2|Mandy|Kaling||4|great prices|7|7|7|JoeBob's Sportz Barn
+3|Angela|Jolie||4|great prices|7|7|7|JoeBob's Sportz Barn
+4|Steven|Wonder||4|great prices|7|7|7|JoeBob's Sportz Barn
+5|Holly|Berry||4|great prices|7|7|7|JoeBob's Sportz Barn
+6|Merryl|Streepman||4|great prices|7|7|7|JoeBob's Sportz Barn
+7|Denzel|George||4|great prices|7|7|7|JoeBob's Sportz Barn
+1|Bradford|Pitt||3|okay venue|1|7|1|Grundy Hollow Wedding Chapel
+2|Mandy|Kaling||3|okay venue|1|7|1|Grundy Hollow Wedding Chapel
+3|Angela|Jolie||3|okay venue|1|7|1|Grundy Hollow Wedding Chapel
+4|Steven|Wonder||3|okay venue|1|7|1|Grundy Hollow Wedding Chapel
+5|Holly|Berry||3|okay venue|1|7|1|Grundy Hollow Wedding Chapel
+6|Merryl|Streepman||3|okay venue|1|7|1|Grundy Hollow Wedding Chapel
+7|Denzel|George||3|okay venue|1|7|1|Grundy Hollow Wedding Chapel
+1|Bradford|Pitt||2|overpriced|2|6|2|Amir's Towing
+2|Mandy|Kaling||2|overpriced|2|6|2|Amir's Towing
+3|Angela|Jolie||2|overpriced|2|6|2|Amir's Towing
+4|Steven|Wonder||2|overpriced|2|6|2|Amir's Towing
+5|Holly|Berry||2|overpriced|2|6|2|Amir's Towing
+6|Merryl|Streepman||2|overpriced|2|6|2|Amir's Towing
+7|Denzel|George||2|overpriced|2|6|2|Amir's Towing
+1|Bradford|Pitt||1|rude bouncer|3|5|3|The Beagle Nightclub
+2|Mandy|Kaling||1|rude bouncer|3|5|3|The Beagle Nightclub
+3|Angela|Jolie||1|rude bouncer|3|5|3|The Beagle Nightclub
+4|Steven|Wonder||1|rude bouncer|3|5|3|The Beagle Nightclub
+5|Holly|Berry||1|rude bouncer|3|5|3|The Beagle Nightclub
+6|Merryl|Streepman||1|rude bouncer|3|5|3|The Beagle Nightclub
+7|Denzel|George||1|rude bouncer|3|5|3|The Beagle Nightclub
+
+There are some repetitive columns if we choose to view all fields. Choose instead to just view the user's names, the business name, the star rating, and the comment.
+SELECT users.First_name, users.Last_name, businesses.name, reviews.stars, reviews.comment FROM reviews INNER JOIN businesses ON reviews.business_id = businesses.id INNER JOIN users ON reviews.user_id = users.id;
+Bradford|Pitt|Grundy Hollow Wedding Chapel|5|great food!
+Mandy|Kaling|Lotus Yoga|4|nice ambiance
+Angela|Jolie|Amir's Towing|3|decent service
+Steven|Wonder|The Beagle Nightclub|2|music not loud enough
+Holly|Berry|Plumbing by Janet|1|too expensive
+Merryl|Streepman|Sushi World|5|fresh fish!
+Denzel|George|JoeBob's Sportz Barn|4|great prices
+Denzel|George|Grundy Hollow Wedding Chapel|3|okay venue
+Merryl|Streepman|Amir's Towing|2|overpriced
+Holly|Berry|The Beagle Nightclub|1|rude bouncer
+
+How do you view the data of all three tables for just one particular business?
+sqlite> SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM businesses INNER JOIN reviews ON businesses.id = reviews.business_id INNER JOIN users ON reviews.user_id = users.id WHERE businesses.id = 1;
+Bradford|Pitt|Grundy Hollow Wedding Chapel|5|great food!
+Denzel|George|Grundy Hollow Wedding Chapel|3|okay venue
+sqlite> SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM businesses INNER JOIN reviews ON businesses.id = reviews.business_id INNER JOIN users ON reviews.user_id = users.id WHERE businesses.id = 2;
+Angela|Jolie|Amir's Towing|3|decent service
+Merryl|Streepman|Amir's Towing|2|overpriced
+sqlite> SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM businesses INNER JOIN reviews ON businesses.id = reviews.business_id INNER JOIN users ON reviews.user_id = users.id WHERE businesses.id = 3;
+Steven|Wonder|The Beagle Nightclub|2|music not loud enough
+Holly|Berry|The Beagle Nightclub|1|rude bouncer
+sqlite> SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM businesses INNER JOIN reviews ON businesses.id = reviews.business_id INNER JOIN users ON reviews.user_id = users.id WHERE businesses.id = 4;
+Mandy|Kaling|Lotus Yoga|4|nice ambiance
+sqlite> SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM businesses INNER JOIN reviews ON businesses.id = reviews.business_id INNER JOIN users ON reviews.user_id = users.id WHERE businesses.id = 5;
+Holly|Berry|Plumbing by Janet|1|too expensive
+sqlite> SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM businesses INNER JOIN reviews ON businesses.id = reviews.business_id INNER JOIN users ON reviews.user_id = users.id WHERE businesses.id = 6;
+Merryl|Streepman|Sushi World|5|fresh fish!
+sqlite> SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM businesses INNER JOIN reviews ON businesses.id = reviews.business_id INNER JOIN users ON reviews.user_id = users.id WHERE businesses
