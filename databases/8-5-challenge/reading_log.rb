@@ -39,3 +39,19 @@ SQL
 db.execute(create_months_table_cmd)
 db.execute(create_books_table_cmd)
 db.execute(create_ratings_table_cmd)
+
+def add_new_mo(db)
+  puts "Enter month and year you want to add book(s) to.  For example, 'December 1995'"
+  new_mo = gets.chomp
+  new_mo = new_mo.split(" ")
+  while new_mo.length != 2
+    puts "Enter month and year in the format MONTH YEAR. For example, 'February 1995'"
+    new_mo = gets.chomp
+    new_mo = new_mo.split(" ")
+  end
+  db.execute("INSERT INTO months (month, year) VALUES ('#{new_mo[0]}', #{new_mo[1]}")
+  month_id = db.execute("SELECT id FROM months WHERE month = '#{new_mo[0]}' AND year = #{new_mo[1]}")
+  month_id = month_id[0][0]
+  return month_id
+end
+
