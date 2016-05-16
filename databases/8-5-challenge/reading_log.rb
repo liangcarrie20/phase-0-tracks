@@ -106,3 +106,11 @@ def del_mo_books(month_id, db)
   db.execute("DELETE FROM books WHERE book_title = '#{book_title}' AND month_id = #{month_id}")
   puts "Book deleted.\n"
 end
+
+def del_mo_rating(month_id, db)
+  print_mo_ratings(month_id, db)
+  puts "Enter rating to delete: "
+  rating = gets.chomp.to_i
+  db.execute("DELETE FROM ratings WHERE rating = #{rating} AND month_id = #{month_id}")
+  puts "Rating deleted.\n"
+end
