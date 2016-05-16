@@ -39,3 +39,19 @@ SQL
 db.execute(create_month_table_cmd)
 db.execute(create_books_table_cmd)
 db.execute(create_rating_table_cmd)
+
+def add_month(db)
+  puts "Enter month and year ('December 2050)"
+  new_month = gets.chomp
+  new_month = new_month.split(" ")
+  while new_month.length != 2
+  	puts "Enter month and year ('December 2050)"
+  	new_month = gets.chomp
+  	new_month = new_month.split(" ")
+  end
+  db.execute("INSERT INTO months (month, year) VALUES ('#{new_month[0]}, #{new_month[1]})")
+  month_id = db.execute("SELECT id FROM months WHERE month = '#{new_month[0]}' AND year = #{new_month[1]}")
+  month_id = month_id[0][0]
+  return month_id
+end
+
