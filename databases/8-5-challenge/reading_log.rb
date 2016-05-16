@@ -63,3 +63,17 @@ def del_mo(db)
   db.execute("DELETE FROM months WHERE id = #{mo_to_del}")
 end
 
+def choose_mo_id(db)
+  print_mo_tbl(db)
+  puts "Enter the ID of the month to access: "
+  month_id = gets.chomp.to_i
+  valid_mo_id = db.execute("SELECT id FROM months WHERE id = #{month_id}")
+  while valid_mo_id.length == 0
+    puts "Invalid ID, please enter valid ID: "
+    month_id = gets.chomp.to_i
+    valid_mo_id = db.execute("SELECT id FROM months WHERE id = #{month_id}")
+  end
+  return month_id
+end
+
+
