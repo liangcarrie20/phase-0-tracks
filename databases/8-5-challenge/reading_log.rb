@@ -100,7 +100,7 @@ end
 def add_rating(month_id, db)
   puts "Enter comments about the title: "
     comments = gets.chomp.to_s
-  puts "Enter rating on a scale from 1 to 100: "
+  puts "Enter rating on a scale from 1 to 5: "
     rating = gets.chomp.to_i
   db.execute("INSERT INTO ratings (month_id, comments, rating) VALUES (#{month_id}, ?, ?)" [comments, rating])
   puts "Rating added.\n"
@@ -134,4 +134,17 @@ def del_mo_rating(month_id, db)
   rating = gets.chomp.to_i
   db.execute("DELETE FROM ratings WHERE rating = #{rating} AND month_id = #{month_id}")
   puts "Rating deleted.\n"
+end
+
+def print_mo_ratings(month_id, db)
+  month_ratings = db.execute("SELECT comments, rating FROM ratings WHERE month_id = #{month_id}")
+  total = 0
+  count = 1
+  month_ratings.each do |month|
+    puts "#{counter}. #{month[0]} - #{month[1]}"
+    total += month[1]
+    count += 1
+  end
+  puts"\nTotal rating: #{total}"
+  return total
 end
