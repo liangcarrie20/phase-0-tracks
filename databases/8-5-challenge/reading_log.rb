@@ -72,3 +72,11 @@ def add_rating(month_id, db)
   db.execute("INSERT INTO ratings (month_id, rating, comment) VALUES (#{month_id}, ?, ?", [rating, comment])
   puts "Thank you \n"
 end
+
+def print_month_table(db)
+  month_table = db.execute("SELECT * FROM months")
+  month_table.each do |month|
+  	puts "id = #{month[0]} ||#{month[1]} #{month[2]}"
+  end
+end
+
