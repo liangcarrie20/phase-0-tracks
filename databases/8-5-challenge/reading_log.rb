@@ -76,6 +76,13 @@ def choose_mo_id(db)
   return month_id
 end
 
+def print_mo_tbl(db)
+  month_table = db.execute("SELECT * FROM months")
+  month_table.each do |month|
+    puts "id = #{month[0]} #{month[1]} #{month[2]}"
+  end
+end
+
 def mo_yr(month_id, db)
   mo_yr_fr_db = db.execute("SELECT month, year FROM months WHERE id=#{month_id}")
   mo_yr = "#{mo_yr_fr_db[0][0]} #{mo_yr_fr_db[0][1]}"
