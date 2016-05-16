@@ -76,4 +76,8 @@ def choose_mo_id(db)
   return month_id
 end
 
+def mo_yr(month_id, db)
+  mo_yr_fr_db = db.execute("SELECT month, year FROM months WHERE id=#{month_id}")
+  mo_yr = "#{mo_yr_fr_db[0][0]} #{mo_yr_fr_db[0][1]}"
+end
 
