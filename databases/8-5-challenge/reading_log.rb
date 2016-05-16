@@ -35,3 +35,7 @@ create_rating_table_cmd = <<-SQL
     FOREIGN KEY (month_id) REFERENCES months(id)
   )
 SQL
+
+db.execute(create_month_table_cmd)
+db.execute(create_books_table_cmd)
+db.execute(create_rating_table_cmd)
