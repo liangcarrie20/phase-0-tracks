@@ -27,7 +27,7 @@ create_books_table_cmd = <<-SQL
 SQL
 
 create_rating_table_cmd = <<-SQL
-  CREATE TABLE IF NOT EXISTS rating(
+  CREATE TABLE IF NOT EXISTS ratings(
     id INTEGER PRIMARY KEY,
     rating INT,
     comment VARCHAR(255),
@@ -57,9 +57,18 @@ end
 
 def add_book(month_id, db)
   puts "Enter title of book: "
-    book_title = gets.chomp
+    title = gets.chomp
   puts "Enter author of book: "
-    book_author = gets.chomp
+    author = gets.chomp
   db.execute("INSERT INTO books (month_id, title, author) VALUES (#{month_id}, ?, ?)", [title, author])
+  puts "Thank you \n"
+end
+
+def add_rating(month_id, db)
+  puts "Enter rating on a scale of 1 to 5: "
+    rating = gets.chomp.to_i
+  puts "Enter comments: "
+    comment = gets.chomp
+  db.execute("INSERT INTO ratings (month_id, rating, comment) VALUES (#{month_id}, ?, ?", [rating, comment])
   puts "Thank you \n"
 end
