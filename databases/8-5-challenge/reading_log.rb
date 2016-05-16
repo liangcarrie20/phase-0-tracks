@@ -81,3 +81,12 @@ def mo_yr(month_id, db)
   mo_yr = "#{mo_yr_fr_db[0][0]} #{mo_yr_fr_db[0][1]}"
 end
 
+def add_book(month_id, db)
+  puts "Enter book title: "
+    book_title = gets.chomp.to_s
+  puts "Enter book's author: "
+    book_author = gets.chomp.to_s
+  db.execute("INSERT INTO books (month_id, book_title, book_author) VALUES (#{month_id}, ?, ?)", [book_title, book_author])
+  puts "Book added.\n"
+end
+
