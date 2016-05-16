@@ -55,3 +55,11 @@ def add_month(db)
   return month_id
 end
 
+def add_book(month_id, db)
+  puts "Enter title of book: "
+    book_title = gets.chomp
+  puts "Enter author of book: "
+    book_author = gets.chomp
+  db.execute("INSERT INTO books (month_id, title, author) VALUES (#{month_id}, ?, ?)", [title, author])
+  puts "Thank you \n"
+end
