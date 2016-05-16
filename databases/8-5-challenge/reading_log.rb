@@ -98,3 +98,11 @@ def add_rating(month_id, db)
   db.execute("INSERT INTO ratings (month_id, comments, rating) VALUES (#{month_id}, ?, ?)" [comments, rating])
   puts "Rating added.\n"
 end 
+
+def del_mo_books(month_id, db)
+  print_mo_books(month_id, db)
+  puts "Enter title of book to delete: "
+  book_title = gets.chomp.to_s
+  db.execute("DELETE FROM books WHERE book_title = '#{book_title}' AND month_id = #{month_id}")
+  puts "Book deleted.\n"
+end
