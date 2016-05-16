@@ -55,3 +55,11 @@ def add_new_mo(db)
   return month_id
 end
 
+def del_mo(db)
+  print_mo_tbl(db)
+  puts "Enter the ID of the month to delete: "
+  mo_to_del = gets.chomp.to_i
+  puts "Deletion in progress..."
+  db.execute("DELETE FROM months WHERE id = #{mo_to_del}")
+end
+
