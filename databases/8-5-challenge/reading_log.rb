@@ -21,7 +21,7 @@ create_books_table_cmd = <<-SQL
     id INTEGER PRIMARY KEY,
     month_id INT,
     book_title VARCHAR(255),
-    book_author VARCHAR(255),
+    times_read INT,
     FOREIGN KEY (month_id) REFERENCES months(id)
   )
 SQL
@@ -91,9 +91,9 @@ end
 def add_book(month_id, db)
   puts "Enter book title: "
     book_title = gets.chomp.to_s
-  puts "Enter book's author: "
-    book_author = gets.chomp.to_s
-  db.execute("INSERT INTO books (month_id, book_title, book_author) VALUES (#{month_id}, ?, ?)", [book_title, book_author])
+  puts "Enter times read: "
+    times_read = gets.chomp.to_i
+  db.execute("INSERT INTO books (month_id, book_title, times_read) VALUES (#{month_id}, ?, ?)", [book_title, times_read])
   puts "Book added.\n"
 end
 
@@ -112,6 +112,20 @@ def del_mo_books(month_id, db)
   book_title = gets.chomp.to_s
   db.execute("DELETE FROM books WHERE book_title = '#{book_title}' AND month_id = #{month_id}")
   puts "Book deleted.\n"
+end
+
+def print_mo_books(month_id, db)
+  month_books = db.execute("SELECT book_title, times_read FROM books WHERE month_id = #{month_id}")
+  puts "All books read in " + mo_yr(month_id, db)
+  total = 0
+  count = 1
+  month_books.each do |month|
+    puts "#{count}. #{month[0]} - #{month[1]}"
+    total += month[1]
+    count += 1
+  end
+  puts "\nTotal books read: #{total}"
+  return total
 end
 
 def del_mo_rating(month_id, db)
