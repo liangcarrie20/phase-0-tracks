@@ -90,3 +90,11 @@ def add_book(month_id, db)
   puts "Book added.\n"
 end
 
+def add_rating(month_id, db)
+  puts "Enter comments about the title: "
+    comments = gets.chomp.to_s
+  puts "Enter rating on a scale from 1 to 100: "
+    rating = gets.chomp.to_i
+  db.execute("INSERT INTO ratings (month_id, comments, rating) VALUES (#{month_id}, ?, ?)" [comments, rating])
+  puts "Rating added.\n"
+end 
