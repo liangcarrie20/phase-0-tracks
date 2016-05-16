@@ -80,3 +80,10 @@ def print_month_table(db)
   end
 end
 
+def access_mo_yr(month_id, db)
+  mo_yr_fr_db = db.execute("SELECT month, year FROM months WHERE id=#{month_id}")
+  mo_yr = "#{mo_yr_fr_db[0][0]} #{mo_yr_fr_db[0][0]}"
+end
+
+# UI
+# Welcome user to program ask user what they'd like to do.
