@@ -24,6 +24,22 @@ If you do not get service back soon, contact your web host as they should know t
 * **550 Permission denied**: The server is stating the account you have currently logged in as does not have permission to perform the action you are attempting.  You may be trying to upload to the wrong directory or trying to delete a file.
 
 # What is the difference between a GET request and a POST request? When might each be used?
+* **GET** requests data from specified resource
+  * GET requests can be cached
+  * GET requests remain in the browser history
+  * GET requests can be bookmarked
+  * GET requests should never be used when dealing with sensitive data
+  * GET requests have length restrictions
+  * GET requests should be used only to retrieve data  
+* **POST** submits data to be processed to a specified resource
+  * POST requests are never cached
+  * POST requests do not remain in browser history
+  * POST requests cannot be bookmarked
+  * POST requests have no restrictions on length data  
+Use POST for destructive actions such as editing and deletion  
+Use GET when it's safe to allow a person to call an action  
+POST is more secure than GET because you aren't sticking information in the URL  
+POST can transmit a larger amount of information
 
-
-# Optional bonus question: What is a cookie (the technical kind, not the delicious kind)? How does it relate to HTTP requests?
+# Optional bonus question: What is a cookie (the technical kind, not the delicious kind)? How does it relate to HTTP requests?  
+A **cookie** is a packet of data sent by a server to a browser which is returned by the browser each time it subsequently accesses the same server used to identify the user or track their access to the server.
