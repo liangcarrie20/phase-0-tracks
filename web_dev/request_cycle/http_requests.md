@@ -13,12 +13,12 @@
 * **500 Internal Server Error**: The server encountered an unexpected condition which prevented it from fulfilling the request.
 * **501 Not Implemented**: The server does not support the functionality required to fulfill the request.  This is the appropriate response when the server does not recognize the request method and is not capable of supporting it for any resource.
 * **503 Service Unavailable**: The web server is unable to handle your HTTP request at the time.  There are many different reasons for why this may occur; here are the most common:
-  *server crash
-  *server maintenance
-  *server overload
-  *server maliciously being attacked
-  *a website has used up its allotted bandwidth
-  *server may be forbidden to return the requested document
+  * server crash
+  * server maintenance
+  * server overload
+  * server maliciously being attacked
+  * a website has used up its allotted bandwidth
+  * server may be forbidden to return the requested document
 This is usually a temporary condition.  Since there is a return code, part of the server is working.  The web people have made the server return this code until they fix the problem.
 If you do not get service back soon, contact your web host as they should know the best.  Some web hosts have server status pages you can check.
 * **550 Permission denied**: The server is stating the account you have currently logged in as does not have permission to perform the action you are attempting.  You may be trying to upload to the wrong directory or trying to delete a file.
