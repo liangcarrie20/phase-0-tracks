@@ -4,4 +4,6 @@ $("document").ready(function() {
     alert("Click click!")
   });
 
+  $('#wrap').css("width", 500);
+  $('#wrap').css("margin", "auto");
 });
