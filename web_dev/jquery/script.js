@@ -6,4 +6,8 @@ $("document").ready(function() {
 
   $('#wrap').css("width", 500);
   $('#wrap').css("margin", "auto");
+
+  $('#toy-poodle').click(function() {
+    $(this).hide();
+  });
 });
