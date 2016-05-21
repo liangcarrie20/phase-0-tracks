@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Management System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>These are the students in the <%= params['campus'] %> campus</h1>
+    <ul>
+        <% @students.each do |student| %>
+          <li><%= student['name'] %></li>
+        <% end %>
+    </ul>
+    <p>Click <a href="/search_campus">here</a> to return to search.</p>
+</body>
+</html>
