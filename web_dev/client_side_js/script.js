@@ -1,13 +1,24 @@
-function hideMe(event) {
-  photo.hidden = "true";
+console.log("The script is running!");
+
+function addPinkBorder(event) {
+  console.log("click happened! here's the click event:");
+  console.log(event);
+  event.target.style.border = "2px solid pink";
 }
+
 var photo = document.getElementById("lizard-photo");
-document.getElementById("hideBtn").addEventListener("click", hideMe);
+photo.addEventListener("click", addPinkBorder);
 
-function changeFontColor(event) {
-  var text = document.getElementsByTagName("strong");
-  var word = text[0];
-  word.style.backgroundColor = "yellow";
+function hideMe(event) {
+  document.getElementById("lizard-photo").hidden = true;
 }
-document.getElementById("showBtn").addEventListener("click", changeFontColor);
 
+var hideButton = document.getElementById("hideBtn");
+hideButton.addEventListener("click", hideMe);
+
+function showMe(event) {
+  document.getElementById("lizard-photo").hidden = false;
+}
+
+var showButton = document.getElementById("showBtn");
+showButton.addEventListener("click", showMe);
