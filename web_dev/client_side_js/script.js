@@ -1,3 +1,5 @@
+// Code from video
+// Verify JavaScript is running
 console.log("The script is running!");
 
 function addPinkBorder(event) {
@@ -8,6 +10,16 @@ function addPinkBorder(event) {
 
 var photo = document.getElementById("lizard-photo");
 photo.addEventListener("click", addPinkBorder);
+
+// Challenge 9.2
+// Function for highlighting
+function highlight(event) {
+  event.target.style.backgroundColor = "yellow";
+}
+
+var words = document.getElementsByTagName("strong");
+var word = words[0];
+word.addEventListener("click", highlight);
 
 function hideMe(event) {
   document.getElementById("lizard-photo").hidden = true;
